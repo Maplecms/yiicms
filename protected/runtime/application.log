@@ -1,0 +1,60 @@
+2014/03/10 14:56:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "backend/default.php".' in F:\www\yiicms\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\www\yiicms\framework\web\CWebApplication.php(141): CWebApplication->runController('backend/default...')
+#1 F:\www\yiicms\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 F:\www\yiicms\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/?r=backend/default.php
+---
+2014/03/10 14:57:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "backend/show".' in F:\www\yiicms\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\www\yiicms\framework\web\CWebApplication.php(141): CWebApplication->runController('backend/show')
+#1 F:\www\yiicms\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 F:\www\yiicms\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/?r=backend/show
+---
+2014/03/10 14:57:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "backend/index".' in F:\www\yiicms\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\www\yiicms\framework\web\CWebApplication.php(141): CWebApplication->runController('backend/index')
+#1 F:\www\yiicms\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 F:\www\yiicms\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/?r=backend/index
+---
+2014/03/10 15:01:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "backend/defaule".' in F:\www\yiicms\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\www\yiicms\framework\web\CWebApplication.php(141): CWebApplication->runController('backend/defaule')
+#1 F:\www\yiicms\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 F:\www\yiicms\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/?r=backend/defaule
+---
+2014/03/10 15:39:42 [error] [exception.CException] exception 'CException' with message 'Alias "auth.filters.AuthFilter" is invalid. Make sure it points to an existing directory or file.' in F:\www\yiicms\framework\YiiBase.php:341
+Stack trace:
+#0 F:\www\yiicms\framework\YiiBase.php(196): YiiBase::import('auth.filters.Au...', true)
+#1 F:\www\yiicms\framework\web\filters\CFilterChain.php(89): YiiBase::createComponent(Array)
+#2 F:\www\yiicms\framework\web\CController.php(291): CFilterChain::create(Object(LoginController), Object(CInlineAction), Array)
+#3 F:\www\yiicms\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 F:\www\yiicms\framework\web\CWebApplication.php(282): CController->run('')
+#5 F:\www\yiicms\framework\web\CWebApplication.php(141): CWebApplication->runController('backend/login/')
+#6 F:\www\yiicms\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 F:\www\yiicms\index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/?r=backend/login/
+---
+2014/03/10 15:40:09 [error] [exception.CException] exception 'CException' with message 'LoginController cannot find the requested view "login".' in F:\www\yiicms\framework\web\CController.php:878
+Stack trace:
+#0 F:\www\yiicms\framework\web\CController.php(782): CController->renderPartial('login', NULL, true)
+#1 F:\www\yiicms\protected\modules\backend\controllers\LoginController.php(18): CController->render('login')
+#2 F:\www\yiicms\framework\web\actions\CInlineAction.php(49): LoginController->actionIndex()
+#3 F:\www\yiicms\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 F:\www\yiicms\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 F:\www\yiicms\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 F:\www\yiicms\framework\web\CWebApplication.php(282): CController->run('')
+#7 F:\www\yiicms\framework\web\CWebApplication.php(141): CWebApplication->runController('backend/login/')
+#8 F:\www\yiicms\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 F:\www\yiicms\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/?r=backend/login/
+---
