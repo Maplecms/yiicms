@@ -6,7 +6,15 @@
 	<meta name="language" content="en" />
 
 	<!-- blueprint CSS framework -->
-	
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/screen.css" media="screen, projection" />
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/print.css" media="print" />
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie.css" media="screen, projection" />
+	<![endif]-->
+
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
+
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
 
@@ -19,25 +27,15 @@
 	</div><!-- header -->
 
 	<div id="mainmenu">
-		<?php $this->widget(
-    'booster.widgets.TbNavbar',
-    array(
-        'brand' => 'Title',
-        'fixed' => false,
-    	'fluid' => true,
-        'items' => array(
-            array(
-                'class' => 'booster.widgets.TbMenu',
-            	'type' => 'navbar',
-                'items' => array(
-                    array('label' => 'Home', 'url' => '#', 'active' => true),
-                    array('label' => 'Link', 'url' => '#'),
-                    array('label' => 'Link', 'url' => '#'),
-                )
-            )
-        )
-    )
-);?>
+		<?php $this->widget('zii.widgets.CMenu',array(
+			'items'=>array(
+				array('label'=>'Home', 'url'=>array('/site/index')),
+				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
+				array('label'=>'Contact', 'url'=>array('/site/contact')),
+				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+			),
+		)); ?>
 	</div><!-- mainmenu -->
 	<?php if(isset($this->breadcrumbs)):?>
 		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
