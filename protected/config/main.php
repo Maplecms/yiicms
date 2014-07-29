@@ -34,7 +34,8 @@ return array(
                          'generatorPaths' => array('bootstrap.gii'),
 		),
 		//引入后台模块
-		'backend'
+		'backend',
+                'app'
 		
 	),
 
