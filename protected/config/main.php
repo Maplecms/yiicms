@@ -11,11 +11,16 @@ return array(
 
 	// preloading 'log' component
 	'preload'=>array('log'),
-
+        // path aliases
+        'aliases' => array(
+       
+                 'bootstrap' => realpath(__DIR__ . '/../extensions/bootstrap'), // change this if necessary
+        ),
 	// autoloading model and component classes
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
+                'bootstrap.helpers.TbHtml',
 	),
 
 	'modules'=>array(
@@ -26,6 +31,7 @@ return array(
 			'password'=>'admin',
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters'=>array('127.0.0.1','::1'),
+                         'generatorPaths' => array('bootstrap.gii'),
 		),
 		//引入后台模块
 		'backend'
@@ -38,6 +44,10 @@ return array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
 		),
+                //bootstrap
+                'bootstrap' => array(
+                    'class' => 'bootstrap.components.TbApi',   
+                ),
 		// uncomment the following to enable URLs in path-format
 		/*
 		'urlManager'=>array(
