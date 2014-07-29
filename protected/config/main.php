@@ -10,17 +10,14 @@ return array(
 	'name'=>'My Web Application',
 
 	// preloading 'log' component
-	'preload'=>array('log'),
+	'preload'=>array('log','bootstrap'),
         // path aliases
-        'aliases' => array(
        
-                 'bootstrap' => realpath(__DIR__ . '/../extensions/bootstrap'), // change this if necessary
-        ),
 	// autoloading model and component classes
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
-                'bootstrap.helpers.TbHtml',
+               
 	),
 
 	'modules'=>array(
@@ -73,6 +70,13 @@ return array(
 			'password' => '',
 			'charset' => 'utf8',
 		),
+                'bootstrap' => array(
+                    'class' => 'ext.bootstrap.components.Booster',
+                    'responsiveCss' => true,
+                    'fontAwesomeCss' => true,
+                    'enableNotifierJS' => false,
+                    'enableBootboxJS' => false
+                ),
 		
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
